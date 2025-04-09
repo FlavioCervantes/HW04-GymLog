@@ -45,4 +45,13 @@
     </string>
     <string name="exercise">Exercise</string>
     <string name="enter_an_exercise">Enter an Exercise</string>
+    <string name="weight" />
+    <string name="enter_a_weight">Enter_A_Weight</string>
+    <string name="Weight">Weight</string>
+    <string name="enter_reps" />
+    <string name="Reps" />
+    <string name="reps" />
+    <string name="Repz">Repz</string>
+    <string name="enter_repz">Enter Reps</string>
+    <string name="log">Log</string>
 </resources>
