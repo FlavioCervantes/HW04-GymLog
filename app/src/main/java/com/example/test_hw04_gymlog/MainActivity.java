@@ -32,7 +32,11 @@ public class MainActivity extends AppCompatActivity {
     int mReps = 0;
     ActivityMainBinding binding;
 
+<<<<<<< HEAD
     public static final String TAG = "DAC GYMLOG";
+=======
+    private static final String TAG = "DAC GYMLOG";
+>>>>>>> origin/Video2-Complete
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,7 +50,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 getInformationFromDisplay();
+<<<<<<< HEAD
               //  Toast.makeText(MainActivity.this, "Log button clicked!", Toast.LENGTH_SHORT).show();
+=======
+>>>>>>> origin/Video2-Complete
                 updateDisplay();
 
             }
