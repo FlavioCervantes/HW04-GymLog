@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
     int mReps = 0;
     ActivityMainBinding binding;
 
-    private static final String TAG = "DAC GYMLOG";
+    public static final String TAG = "DAC GYMLOG";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 getInformationFromDisplay();
+              //  Toast.makeText(MainActivity.this, "Log button clicked!", Toast.LENGTH_SHORT).show();
                 updateDisplay();
 
             }
