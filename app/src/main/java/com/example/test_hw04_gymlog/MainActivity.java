@@ -2,6 +2,8 @@ package com.example.test_hw04_gymlog;
 
 import android.os.Bundle;
 
+import com.example.test_hw04_gymlog.database.GymLogRepository;
+import com.example.test_hw04_gymlog.database.entities.GymLog;
 import com.google.android.material.snackbar.Snackbar;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -30,19 +32,20 @@ public class MainActivity extends AppCompatActivity {
     String mExercise = "";
     double mWeight = 0.0;
     int mReps = 0;
-    ActivityMainBinding binding;
-
-<<<<<<< HEAD
+    private ActivityMainBinding binding;
+private GymLogRepository repository;
     public static final String TAG = "DAC GYMLOG";
-=======
-    private static final String TAG = "DAC GYMLOG";
->>>>>>> origin/Video2-Complete
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        //Gives access to DTB
+            repository = new GymLogRepository(getApplication());
+
+
 // scrollable
         binding.logDisplayTextView.setMovementMethod(new ScrollingMovementMethod());
         // Set up the toolbar
@@ -50,15 +53,18 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 getInformationFromDisplay();
-<<<<<<< HEAD
+                insertGymLogRecord();
               //  Toast.makeText(MainActivity.this, "Log button clicked!", Toast.LENGTH_SHORT).show();
-=======
->>>>>>> origin/Video2-Complete
                 updateDisplay();
 
             }
         });
 
+    }
+
+    private void insertGymLogRecord() {
+        GymLog gymLog = new GymLog(mExercise, mWeight, mReps);
+        repository.insertGymLog(gymLog);
     }
 
     private void updateDisplay() {

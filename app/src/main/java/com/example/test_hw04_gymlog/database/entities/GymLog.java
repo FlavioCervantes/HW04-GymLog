@@ -1,12 +1,12 @@
-package com.example.test_hw04_gymlog.Database.entities;
+package com.example.test_hw04_gymlog.database.entities;
 
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
 
-import com.example.test_hw04_gymlog.Database.GymLogDatabase;
+import com.example.test_hw04_gymlog.database.GymLogDatabase;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Objects;
 
 
@@ -17,7 +17,7 @@ private int id;
     private String exercise;
     private double weight;
     private int reps;
-    private LocalDate date;
+    private LocalDateTime date;
 
 //setters and getters
     public int getId() {
@@ -52,11 +52,11 @@ private int id;
         this.reps = reps;
     }
 
-    public LocalDate getDate() {
+    public LocalDateTime getDate() {
         return date;
     }
 
-    public void setDate(LocalDate date) {
+    public void setDate(LocalDateTime date) {
         this.date = date;
     }
 
@@ -67,7 +67,7 @@ private int id;
         this.exercise = exercise;
         this.weight = weight;
         this.reps = reps;
-        date =  LocalDate.now();
+        date =  LocalDateTime.now();
     }
 
 
