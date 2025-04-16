@@ -16,6 +16,6 @@ public interface GymLogDAO {
     void insert(GymLog gymlog);
 
 
-    @Query("SELECT * from " + GymLogDatabase.GYM_LOG_TABLE)
+    @Query("SELECT * from " + GymLogDatabase.GYM_LOG_TABLE + " ORDER BY date DESC")
    List<GymLog> getAllRecords();
 }

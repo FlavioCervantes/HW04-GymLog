@@ -1,5 +1,6 @@
 package com.example.test_hw04_gymlog.database.entities;
 
+import androidx.annotation.NonNull;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
@@ -70,8 +71,19 @@ private int id;
         date =  LocalDateTime.now();
     }
 
+    //one can verify this is working via Logcat -> one will see the logs being label accordingly.
+    @NonNull
+    @Override
+    public String toString() {
+        return  exercise + '\n' +
+                "weight: " + weight + '\n' +
+                ", reps: " + reps + '\n' +
+                ", date: " + date.toString()  + '\n' +
+                "******************" + '\n' +
+                '}';
+    }
 
-    // equals and hash codes
+// equals and hash codes
 
 
     @Override
